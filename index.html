@@ -1,42 +1,189 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light" dir="ltr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Curated Lux – Aesthetic Affiliate Finds</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Curated affiliate products – tech, fashion, and home essentials. Discover aesthetic, high-end finds from trusted retailers.">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" />
 </head>
 <body>
-  <header class="site-header" id="siteHeader">
-    <div class="container">
-      <a href="index.html" class="logo">Curated Lux</a>
-      <nav class="main-nav">
-        <a href="#collections">For You</a>
-        <a href="#celebrity">Celeb Picks</a>
-        <a href="about.html">About</a>
+  <header class="cl-header">
+    <div class="cl-header-inner">
+      <div class="cl-logo">BR.<span class="cl-logo-faded">F</span></div>
+      <nav class="cl-nav">
+        <a href="#">Women</a>
+        <a href="#">Men</a>
+        <a href="#">Kids</a>
+        <a href="#">Sports</a>
+        <a href="#">Brands</a>
+        <a href="#" class="cl-nav-sale">New</a>
+        <a href="#" class="cl-nav-sale">Sale</a>
       </nav>
+      <div class="cl-header-right">
+        <div class="cl-search">
+          <input type="text" placeholder="Search curated tech & design" id="searchInput">
+        </div>
+        <button class="cl-icon-button" id="cartButton">
+          <span class="cl-cart-count" id="cartCount">0</span>
+          🛒
+        </button>
+        <div class="cl-avatar"></div>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section class="hero" id="hero">
-      <div class="container">
-        <h1>Browse a luxury catalog inspired by 1980s Apple</h1>
-        <p>Handpicked tech, fashion, and home essentials from trusted partners.</p>
-        <a href="#collections" class="btn btn--primary">Shop Now</a>
+  <main class="cl-main">
+    <section class="cl-hero">
+      <div class="cl-hero-media">
+        <div class="cl-hero-image skeleton"></div>
+      </div>
+      <div class="cl-hero-details">
+        <p class="cl-breadcrumb">Curated tech & lifestyle · Hot this week</p>
+        <h1 id="heroTitle">Shoes Reebok Zig Kinetica 3</h1>
+        <p class="cl-hero-sub" id="heroSubtitle">
+          A minimal, responsive e‑commerce layout inspired by clean sneaker product pages.
+        </p>
+        <div class="cl-hero-rating">
+          <span>★★★★☆</span>
+          <span class="cl-rating-count">48 reviews</span>
+        </div>
+        <div class="cl-hero-price-line">
+          <span class="cl-price" id="heroPrice">$199.00</span>
+          <span class="cl-tag cl-tag-hot" id="heroTag">Hot This Week</span>
+        </div>
+
+        <div class="cl-options-row">
+          <div>
+            <p class="cl-label">Color</p>
+            <div class="cl-color-swatches">
+              <button class="cl-color-swatch is-active" style="background:#e5e5e5" aria-label="Light grey"></button>
+              <button class="cl-color-swatch" style="background:#111111" aria-label="Black"></button>
+              <button class="cl-color-swatch" style="background:#ffffff" aria-label="White"></button>
+            </div>
+          </div>
+          <div>
+            <p class="cl-label">Size</p>
+            <div class="cl-size-grid">
+              <button class="cl-size-pill is-active">40.5</button>
+              <button class="cl-size-pill">41</button>
+              <button class="cl-size-pill">42</button>
+              <button class="cl-size-pill">43</button>
+              <button class="cl-size-pill">44</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="cl-hero-actions">
+          <button class="cl-primary" id="heroAddToCart">Add to cart</button>
+          <button class="cl-ghost">♡</button>
+        </div>
+        <p class="cl-note">Free delivery on orders over $30. No extra cost on affiliate links.</p>
       </div>
     </section>
 
-    <section class="section" id="collections">
-      <div class="container">
-        <h2>For You</h2>
-        <div class="product-grid" id="forYouGrid"></div>
+    <section class="cl-layout">
+      <div class="cl-layout-main">
+        <div class="cl-tabs">
+          <button class="cl-tab is-active" data-tab="details">Details</button>
+          <button class="cl-tab" data-tab="reviews">Reviews</button>
+          <button class="cl-tab" data-tab="discussion">Discussion</button>
+        </div>
+
+        <div class="cl-tab-panel is-active" id="tab-details">
+          <p class="cl-body">
+            Discover a curated grid of tech, audio, and lifestyle items with clean photography,
+            generous whitespace, and quick‑access affiliate links.
+          </p>
+        </div>
+
+        <div class="cl-tab-panel" id="tab-reviews">
+          <div class="cl-review-summary">
+            <div class="cl-review-score">
+              <div class="cl-score-number">4.8</div>
+              <div class="cl-score-stars">★★★★★</div>
+              <p class="cl-score-label">Based on 42 reviews</p>
+            </div>
+            <div class="cl-score-bars">
+              <div class="cl-score-row"><span>5</span><div class="cl-score-bar"><span style="width:70%"></span></div><span>28</span></div>
+              <div class="cl-score-row"><span>4</span><div class="cl-score-bar"><span style="width:20%"></span></div><span>9</span></div>
+              <div class="cl-score-row"><span>3</span><div class="cl-score-bar"><span style="width:6%"></span></div><span>4</span></div>
+              <div class="cl-score-row"><span>2</span><div class="cl-score-bar"><span style="width:3%"></span></div><span>1</span></div>
+              <div class="cl-score-row"><span>1</span><div class="cl-score-bar"><span style="width:1%"></span></div><span>0</span></div>
+            </div>
+          </div>
+
+          <div class="cl-review-list">
+            <article class="cl-review">
+              <div class="cl-review-header">
+                <div class="cl-review-avatar"></div>
+                <div>
+                  <p class="cl-review-name">Helen M.</p>
+                  <p class="cl-review-meta">Yesterday · ★★★★★</p>
+                </div>
+              </div>
+              <p class="cl-review-text">
+                Excellent running shoes. It turns very sharply on the foot and still feels minimal.
+              </p>
+            </article>
+
+            <article class="cl-review">
+              <div class="cl-review-header">
+                <div class="cl-review-avatar"></div>
+                <div>
+                  <p class="cl-review-name">Ann D.</p>
+                  <p class="cl-review-meta">2 days ago · ★★★★☆</p>
+                </div>
+              </div>
+              <p class="cl-review-text">Good shoes, great grip, fits true to size.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="cl-tab-panel" id="tab-discussion">
+          <p class="cl-body">Have a question about sizing, materials, or delivery? Start a discussion.</p>
+        </div>
       </div>
+
+      <aside class="cl-layout-aside">
+        <div class="cl-card cl-popular-card">
+          <h3>Popular brands with discounts over 25%</h3>
+          <p>Browse updated offers from partners we trust.</p>
+          <button class="cl-ghost w-100">View more</button>
+        </div>
+
+        <div class="cl-card">
+          <h3 class="cl-card-title">Curated products</h3>
+          <div id="productGrid" class="cl-product-grid">
+            <!-- cards rendered by JS -->
+          </div>
+        </div>
+      </aside>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <!-- Cart drawer -->
+  <div class="cl-cart-overlay" id="cartOverlay">
+    <div class="cl-cart-drawer">
+      <header class="cl-cart-header">
+        <h2>Your basket</h2>
+        <button class="cl-icon-button" id="cartClose">✕</button>
+      </header>
+      <div class="cl-cart-body" id="cartItems">
+        <p class="cl-body-muted">Your basket is empty. Add something minimal.</p>
+      </div>
+      <footer class="cl-cart-footer">
+        <div class="cl-cart-total">
+          <span>Subtotal</span>
+          <strong id="cartTotal">$0.00</strong>
+        </div>
+        <button class="cl-primary w-100" id="cartCheckout">Checkout via partners</button>
+      </footer>
+    </div>
+  </div>
+
+  <footer class="cl-footer">
     <p>© 2026 Curated Lux. We earn from qualifying purchases.</p>
   </footer>
 
